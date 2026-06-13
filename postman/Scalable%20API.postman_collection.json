@@ -1,0 +1,33 @@
+{
+  "info": {
+    "name": "Scalable API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ingest Payload",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"external_id\": \"sample-123\",\n  \"data\": { \"foo\": \"bar\" },\n  \"metadata\": { \"source\": \"postman\" }\n}"
+        },
+        "url": { "raw": "http://localhost:3000/api/payloads/ingest", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api","payloads","ingest"] }
+      }
+    },
+    {
+      "name": "Get Payload",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/api/payloads/sample-123", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api","payloads","sample-123"] }
+      }
+    },
+    {
+      "name": "List Payloads",
+      "request": { "method": "GET", "url": { "raw": "http://localhost:3000/api/payloads", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api","payloads"] } }
+    }
+  ]
+}

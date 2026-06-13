@@ -1,0 +1,29 @@
+{
+  "name": "scalable-rest-api-nodejs",
+  "version": "0.1.0",
+  "description": "Scalable REST API scaffold with Express and Sequelize for high-throughput payload ingestion",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "migrate": "node scripts/sync_db.js",
+    "loadtest": "node scripts/load_test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sequelize": "^6.32.1",
+    "pg": "^8.11.0",
+    "pg-hstore": "^2.3.4",
+    "mysql2": "^3.5.2",
+    "dotenv": "^16.3.1",
+    "joi": "^17.9.2",
+    "swagger-ui-express": "^4.6.3",
+    "swagger-jsdoc": "^6.2.8",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "autocannon": "^8.11.2"
+  }
+}
